@@ -34,8 +34,8 @@ jobs:
         run: docker login --username ${{ secrets.DOCKERUSR }} --password ${{ secrets.DOCKER_TOKEN }}
 
       - name: "Docker Build"
-        run: docker build -t yousefaymanshehab/yousefaymanshehab:latest .
+        run: docker build -t ${{ secrets.DOCKERUSR }}/yousefaymanshehab:latest .
       
       - name: "Docker Push"
-        run: docker push yousefaymanshehab/yousefaymanshehab:latest
+        run: docker push ${{ secrets.DOCKERUSR }}/yousefaymanshehab:latest
       
