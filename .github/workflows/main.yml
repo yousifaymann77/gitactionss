@@ -30,14 +30,14 @@ jobs:
       - name: "After"
         run: ls  
       
-      # - name: "login to dockerhub"
-      #   run: docker login --username ${{ secrets.DOCKERUSR }} --password ${{ secrets.DOCKERPASS }}
+      - name: "login to dockerhub"
+        run: docker login --username ${{ secrets.DOCKERUSR }} --password ${{ secrets.DOCKER_TOKEN }}
 
-      # - name: "Docker img"
-      #   run: docker build -t ${{ secrets.DOCKERUSR }}/yousefaymanshehab
+      - name: "Docker img"
+        run: docker build -t ${{ secrets.DOCKERUSR }}/yousefaymanshehab
 
-      # - name: "Docker push"
-      #   run : docker push ${{ secrets.DOCKERUSR }}/yousefaymanshehab
+      - name: "Docker push"
+        run : docker push ${{ secrets.DOCKERUSR }}/yousefaymanshehab
 
 
 
