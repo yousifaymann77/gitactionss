@@ -27,7 +27,7 @@ jobs:
         run: ls
       - uses : actions/checkout@v3
 
-      - name: "After"
+      - name: "Afterr"
         run: ls  
       
       - name: "login to dockerhub"
